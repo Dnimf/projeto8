@@ -1,0 +1,7 @@
+[fc-fm;fc+fm]
+
+fc=15kHz
+fm=2kHz
+
+[13kHz;17kHz]
+13kHz
