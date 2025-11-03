@@ -10,7 +10,7 @@ f= 2000
 f2= 15*1000
 x=1*np.sin(2*np.pi*f*t)
 x2=1*np.sin(2*np.pi*f2*t)
-x3 = x+x2
+x3 = x*x2
 
 
 freqs, magnitude, magnitude_db = compute_fft(x3, fs, window=None, nfft=None, return_complex=False)
