@@ -105,6 +105,11 @@ def trata_audio(audio,b, a):
     # ynp = np.array(y)
     ynp = lfilter(b,a,tone)
     return ynp
+def paraMono(audio):
+    audio_mono=[]
+    for i in audio:
+        audio_mono.append(float(i[0]))
+    return audio_mono
 # if __name__ == "__main__":
 #     # Parameters
 #     fs = 44100         # Sampling rate (Hz)
