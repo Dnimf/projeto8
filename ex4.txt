@@ -1,0 +1,7 @@
+Para transmitir na o sinal composto por multiplas senoides de 20 a 2000 Hz
+em uma banda de 14 kHz a 16khz é necessario filtrar as faixas superiores a
+1kHz antes da modulação em seguida deve ser feita a modulação do sinal filtrado
+multiplicando o sinal filtrado pelo sinal portador, obtendo assim um sinal
+modulado de 14 kHz a 16 kHz posem as senoides superiores a 1 kHz serão perdidas
+dessa forma caso seja trasmitido um som, o som recebido sera mais grave visto que 
+as altas frequencias serão perdidas.
