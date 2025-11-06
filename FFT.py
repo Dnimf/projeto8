@@ -102,7 +102,7 @@ def plot_time_and_spectrum(t, x, fs, freqs, magnitude, magnitude_db, x_label_tim
     # plt.grid(True)
     # plt.tight_layout()
 
-    plt.show()
+    # plt.show()
 
 def generate_example_signal(fs=1000.0, T=1.0):
     """Gera sinal de exemplo: soma de senóides + ruído."""
