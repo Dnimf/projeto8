@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.signal import freqz, lfilter, iirpeak, TransferFunction
+from scipy.signal import freqz, lfilter, iirpeak, TransferFunction, butter
 
 def peaking_eq(f0, gain_db, Q, fs):
     """
@@ -72,17 +72,14 @@ def descobreQ(f):
     elif f<=bandas[11]:
         q=2
     return q
-def filtro_passa_baixa(f0,Q, fs):          # Sampling rate (Hz)
+def filtro_passa_faixa(f0,Q, fs):          # Sampling rate (Hz)
 
     # Design band-pass filter using iirpeak (biquad)
     b, a = iirpeak(w0=f0/(fs/2), Q=Q)  # Normalized frequency (f0 / Nyquist)
-    # b=intensity * b
-    # Optional: Create TransferFunction object (discrete system)
-    # Note: 'dt=1/fs' makes it a discrete-time system
-
-    # # Frequency response plot  ... Bode
-    # w, h = freqz(b, a, fs=fs)
     return b, a
+def filtro_passa_baixa(ordem,fs,fc):
+    b, a = butter(N=ordem, Wn=fc/(fs/2), btype='low')
+    return b , a
 def trata_audio(audio,b, a):
     tone = []
     for t1 in range(len(audio)):
