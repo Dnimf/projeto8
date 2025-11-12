@@ -105,8 +105,9 @@ def trata_audio(audio,b, a):
 def paraMono(audio):
     audio_mono=[]
     for i in audio:
-        audio_mono.append(float(i[0]))
+        audio_mono.append((float(i[0])+float(i[1]))/2)
     return audio_mono
+# def passa_alta
 # if __name__ == "__main__":
 #     # Parameters
 #     fs = 44100         # Sampling rate (Hz)
